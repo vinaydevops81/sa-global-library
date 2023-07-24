@@ -1,13 +1,14 @@
 import com.i27academy.builds.Calculator
 
 def call(Map pipelineParams) {
-    Library(com.i27academy.builds)
+    library(com.i27academy.builds)
     Calculator calculator = new Calculator(this)
-    environment {
-        APP_NAME = "${pipelineParams.appName}"
-    }
+ 
     pipeline {
         agent any
+           environment {
+        APP_NAME = "${pipelineParams.appName}"
+    }
         stages {
             stage("Echol") {
                 steps {
