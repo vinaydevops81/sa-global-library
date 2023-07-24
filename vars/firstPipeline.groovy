@@ -1,6 +1,7 @@
 import com.i27academy.builds.Calculator
 
 def call(Map pipelineParams) {
+    Library(com.i27academy.builds)
     Calculator calculator = new Calculator(this)
     environment {
         APP_NAME = "${pipelineParams.appName}"
@@ -15,7 +16,7 @@ def call(Map pipelineParams) {
                     println calculator.add(2,8)
                       echo "printing multiply of 2 numbers"
                     println calculator.multiply(2,8)
-                    echo "microservice name is ${env.APP_NAME}"
+                    echo "microservice name is ${params.APP_NAME}"
                 }
                 }
             }
