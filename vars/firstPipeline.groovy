@@ -15,7 +15,7 @@ def call(Map pipelineParams) {
                     println calculator.add(2,8)
                       echo "printing multiply of 2 numbers"
                     println calculator.multiply(2,8)
-                    echo "microservice name is ${params.APP_NAME}"
+                    echo "microservice name is ${env.APP_NAME}"
                 }
                 }
             }
