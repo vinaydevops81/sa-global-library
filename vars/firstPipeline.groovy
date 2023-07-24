@@ -1,7 +1,7 @@
 import com.i27academy.builds.Calculator
 
 def call(Map pipelineParams) {
-    library('com.i27academy.builds')
+    library('com.i27academy.slb')
     Calculator calculator = new Calculator(this)
  
     pipeline {
