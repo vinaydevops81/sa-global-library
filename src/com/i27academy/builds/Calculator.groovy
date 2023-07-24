@@ -2,7 +2,7 @@ package com.i27academy.builds
 
 
 class Calculator {
-    //addition method
+    def jenkins
     Calculator (jenkins) {
         this.jenkins = jenkins
     }
